@@ -9,12 +9,12 @@ pipeline {
             }
         }
         
-     stage('Deploy HTML files') {
-    steps {
-        // Copy HTML files to Xampp server
-        sh 'xcopy /s *.html "C:/xampp/htdocs"'
+        stage('Deploy HTML files') {
+            steps {
+                // Copy HTML files to Xampp server
+                bat 'copy *.html "C:\\xampp\\htdocs"'
+            }
+        }
     }
 }
 
-    }
-}
